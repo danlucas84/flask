@@ -17,7 +17,7 @@ def czesc(imie=None):
 
 #@app.route("/hej/<imie>")
 #def powitanie(imie):
-   # return f"Czesc {imie}"
+# return f"Czesc {imie}"
 
 @app.route("/users/<int:id>")
 

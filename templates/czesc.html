@@ -5,6 +5,10 @@
     <title>Cześć!</title>
 </head>
 <body>
-<h1>Cześć, {{ imie }}</h1>>
+{% if imie %}
+<h1>Cześć, {{ imie }}</h1>
+{% else %}
+<h1>"CZESC WAM"</h1>
+{% endif %}
 </body>
 </html>
