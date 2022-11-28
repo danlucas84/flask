@@ -11,18 +11,19 @@ def hello():
 
 
 @app.route("/czesc")
-def czesc():
-    return """ 
+@app.route("/czesc/<imie>")
+def czesc(imie=None):
+    return f""" 
     <html>
     <head><title>czesc</title><head>
     <body>
-    <h1>CZESC WAM !</h1>
+    <h1>CZESC wam i {imie} !</h1>
     </body>    
     </html>
     """
-@app.route("/hej/<imie>")
-def powitanie(imie):
-    return f"Czesc {imie}"
+#@app.route("/hej/<imie>")
+#def powitanie(imie):
+   # return f"Czesc {imie}"
 
 @app.route("/users/<int:id>")
 
