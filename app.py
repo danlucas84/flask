@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -13,14 +13,8 @@ def hello():
 @app.route("/czesc")
 @app.route("/czesc/<imie>")
 def czesc(imie=None):
-    return f""" 
-    <html>
-    <head><title>czesc</title><head>
-    <body>
-    <h1>CZESC wam i {imie} !</h1>
-    </body>    
-    </html>
-    """
+    return render_template("czesc.html", imie=imie)
+
 #@app.route("/hej/<imie>")
 #def powitanie(imie):
    # return f"Czesc {imie}"
