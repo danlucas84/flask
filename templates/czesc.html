@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cześć!</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Czesc{% endblock %}
+
+{% block content %}
 {% if imie %}
 <h1>Cześć, {{ imie }}</h1>
 {% else %}
 <h1>"CZESC WAM"</h1>
 {% endif %}
-</body>
-</html>
+{% endblock %}
